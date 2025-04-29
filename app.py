@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from users import add_user, get_users
+from users import add_user, get_users, delete_user
 
 app = Flask(__name__)
 
@@ -14,6 +14,15 @@ def create_user():
 @app.route('/users', methods=['GET'])
 def list_users():
     return jsonify(get_users())
+
+@app.route('/users/<int:user_id>', methods=['DELETE'])
+def remove_user(user_id):
+    success = delete_user(user_id)
+    if success:
+        return jsonify({'message': f'User {user_id} deleted'}), 200
+    else:
+        return jsonify({'error': 'User not found'}), 404
+
 
 if __name__ == '__main__':
     app.run(debug=True)

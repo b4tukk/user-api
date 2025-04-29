@@ -7,3 +7,11 @@ def add_user(name):
 
 def get_users():
     return users
+
+def delete_user(user_id):
+    global users
+    for user in users:
+        if user["id"] == user_id:
+            users.remove(user)
+            return True
+    return False

@@ -12,13 +12,13 @@ Bu proje, Python ile yazılmış basit bir REST API örneğidir. Kullanıcı ekl
 
 ## 🧱 Proje Yapısı
 
-user_api/ 
-├── app.py # Flask uygulaması 
-├── users.py # Kullanıcı işlemleri 
-├── test_users.py # Pytest testleri 
-├── requirements.txt # Gerekli Python paketleri 
-└── .github/workflows/ 
-    └── python-app.yml # CI pipeline (GitHub Actions)
+user_api/ \n
+├── app.py # Flask uygulaması \n
+├── users.py # Kullanıcı işlemleri \n
+├── test_users.py # Pytest testleri \n
+├── requirements.txt # Gerekli Python paketleri \n
+└── .github/workflows/ \n
+|t └── python-app.yml # CI pipeline (GitHub Actions)\n
 
 ## ⚙️ Kurulum ve Çalıştırma
 
@@ -31,17 +31,21 @@ pip install -r requirements.txt
 ```
 
 ### 2. Uygulamayı Başlat
+
 ```bash
 python app.py
 ```
 
 ### 3. API Kullanımı
+
 POST /users – Yeni kullanıcı ekler
+
 ```bash
 {
   "name": "Ali"
 }
 ```
+
 GET /users – Tüm kullanıcıları listeler
 
 🧪 Testler

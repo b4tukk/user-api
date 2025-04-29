@@ -17,8 +17,8 @@ user_api/
 ├── users.py # Kullanıcı işlemleri  
 ├── test_users.py # Pytest testleri  
 ├── requirements.txt # Gerekli Python paketleri  
-└── .github/workflows/      
-     └── python-app.yml # CI pipeline (GitHub Actions)  
+├── .github/workflows/  
+    └── python-app.yml # CI pipeline (GitHub Actions)
 
 ## ⚙️ Kurulum ve Çalıştırma
 
